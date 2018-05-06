@@ -9,3 +9,7 @@
 
 # Temp files
 tmp/*
+!tmp/.empty
+
+# vim files
+*.swp
