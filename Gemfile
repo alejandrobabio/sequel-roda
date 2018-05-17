@@ -21,8 +21,8 @@ gem 'sequel_pg'
 gem 'tilt', '>= 2'
 gem 'slim'
 
-
 gem 'dotenv'
+
 group :development, :test do
   gem 'pry-byebug', platform: :mri
 end
