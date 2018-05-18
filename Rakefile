@@ -4,11 +4,11 @@ require 'dotenv/load'
 
 migrate = lambda do |env, version|
   ENV['RACK_ENV'] = env
-  require_relative 'db'
+  require_relative 'lib/db'
   require 'logger'
   Sequel.extension :migration
   DB.loggers << Logger.new($stdout)
-  Sequel::Migrator.apply(DB, 'migrate', version)
+  Sequel::Migrator.apply(DB, 'db/migrate', version)
 end
 
 desc "Migrate test database to latest version"

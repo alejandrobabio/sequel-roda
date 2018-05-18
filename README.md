@@ -12,3 +12,7 @@ $ cp .example.env .env.test
 $ psql -c 'create database my_app_development;' -U postgres
 $ psql -c 'create database my_app_test;' -U postgres
 ```
+1. Generate first migration and run migration
+```
+$ rake dev_up
+```
